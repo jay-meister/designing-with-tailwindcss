@@ -1,0 +1,17 @@
+{
+  "name": "designing-with-tailwind-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss css/tailwind.css -o public/buid/tailwind.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.0.0",
+    "postcss-cli": "^8.0.0",
+    "tailwindcss": "^1.9.6"
+  }
+}
