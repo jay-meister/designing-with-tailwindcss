@@ -4,14 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "postcss css/tailwind.css -o public/buid/tailwind.css"
+    "build": "postcss css/tailwind.css -o public/build/tailwind.css",
+    "watch": "postcss css/tailwind.css -o public/build/tailwind.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^3.0.0",
     "autoprefixer": "^9.0.0",
     "postcss-cli": "^8.0.0",
     "tailwindcss": "^1.9.6"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10"
   }
 }

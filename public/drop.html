@@ -1,0 +1,47 @@
+<!-- 
+  screens: {
+    'sm': '640px',
+    'md': '768px',
+    'lg': '1024px',
+    'xl': '1280px',
+  } 
+-->
+
+<html>
+
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="UTF-9">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page title</title>
+
+    <link rel="stylesheet" href="/build/tailwind.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  </head>
+
+  <body class="bg-gray-800">
+    <div class="w-64 pt-64 mx-auto">
+      <div x-data="{ open: false }">
+        <button @click="open = !open"
+          class="rounded-full overflow-hidden border-2 border-gray-600 hover:border-gray-500 focus:outline-none focus:border-gray-300 w-12 h-12">
+          <img class="h-full w-full object-cover"
+            src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&q=80"
+            alt="Your avatar">
+        </button>
+        <!-- dropdown -->
+        <div :class="{ 'hidden': !open }" @click="open = false" @click.away="open = false"
+          class="py-2 -mt-1 relative bg-white rounded-xl text-gray-800">
+          <a href="#"
+            class="block px-4 py-1 focus:text-gray-300 focus:outline-none focus:bg-indigo-600 hover:bg-indigo-hover hover:text-gray-300">Account
+            settings</a>
+          <a href="#"
+            class="block px-4 py-1 focus:text-gray-300 focus:outline-none focus:bg-indigo-600 hover:bg-indigo-hover hover:text-gray-300">Support</a>
+          <a href="#"
+            class="block px-4 py-1 focus:text-gray-300 focus:outline-none focus:bg-indigo-600 hover:bg-indigo-hover hover:text-gray-300">Sign
+            out</a>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
