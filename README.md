@@ -88,6 +88,16 @@ use <span> inline-block for span elements so increasing padding affects surround
 </div>
 ``` 
 
+Make a full screen overlay to close a modal etc
+```html
+<button 
+  @click="open = false" 
+  x-show="open"
+  class="fixed w-full h-full opacity-25 bg-gray-700 cursor-default inset-0">
+</button>
+```
+
+
 Ensure image is full width when not distorted
 ```html
 <img class="mt-6 sm:mt-8 sm:h-64 sm:w-full sm:object-cover sm:object-center rounded-lg shadow-xl"
